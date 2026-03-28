@@ -154,7 +154,7 @@ img { max-width:100%; height:auto; }
 }
 .hero-bg {
   position:absolute; inset:0;
-  background: url('images/ghee wala hero.png') center/cover no-repeat;
+  background: url('images/ghee-wala-hero.png') center/cover no-repeat;
   animation: heroParallax 20s ease-in-out infinite alternate;
   will-change:transform;
 }

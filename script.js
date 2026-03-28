@@ -4,22 +4,22 @@
 
   // ===== PRODUCT DATA =====
   const products = [
-    { id:1, name:'Buffalo Ghee 1kg', price:800, weight:'1 kg', category:'ghee', desc:'Pure buffalo ghee with rich aroma', img:'images/buffalo ghee.png', badge:'Popular' },
-    { id:2, name:'Buffalo Ghee 500g', price:400, weight:'500 g', category:'ghee', desc:'Pure buffalo ghee, half pack', img:'images/buffalo ghee.png' },
-    { id:3, name:'Buffalo Ghee 250g', price:200, weight:'250 g', category:'ghee', desc:'Pure buffalo ghee, small pack', img:'images/buffalo ghee.png' },
-    { id:4, name:'Cow Ghee Cream 1kg', price:600, weight:'1 kg', category:'ghee', desc:'Premium cow ghee cream, authentic taste', img:'images/cow ghee cream.png', badge:'Best Seller' },
-    { id:5, name:'Cow Ghee Cream 500g', price:300, weight:'500 g', category:'ghee', desc:'Cow ghee cream, half pack', img:'images/cow ghee cream.png' },
-    { id:6, name:'Cow Ghee Cream 250g', price:150, weight:'250 g', category:'ghee', desc:'Cow ghee cream, small pack', img:'images/cow ghee cream.png' },
-    { id:7, name:'Cow Ghee Malai 1kg', price:1000, weight:'1 kg', category:'ghee', desc:'Premium cow ghee malai, top quality', img:'images/cow ghee malai.png', badge:'Premium' },
-    { id:8, name:'Cow Ghee Malai 500g', price:500, weight:'500 g', category:'ghee', desc:'Cow ghee malai, half pack', img:'images/cow ghee malai.png' },
-    { id:9, name:'Cow Ghee Malai 250g', price:250, weight:'250 g', category:'ghee', desc:'Cow ghee malai, small pack', img:'images/cow ghee malai.png' },
-    { id:10, name:'Puja Ghee', price:250, weight:'', category:'ghee', desc:'Special ghee for puja & rituals', img:'images/puja ghee.png', badge:'Puja Special' },
-    { id:11, name:'Plain Lassi', price:20, weight:'Glass', category:'lassi', desc:'Traditional refreshing plain lassi', img:'images/plain lassi.png' },
-    { id:12, name:'Special Lassi', price:40, weight:'Glass', category:'lassi', desc:'Creamy special lassi with dry fruits', img:'images/special lassi.png', badge:'Popular' },
-    { id:13, name:'Mango Lassi', price:40, weight:'Glass', category:'lassi', desc:'Delicious mango-flavoured lassi', img:'images/mango lassi.png' },
-    { id:14, name:'Ghee Vaja Lengcha', price:10, weight:'1 pc', category:'sweets', desc:'Traditional ghee-fried lengcha sweet', img:'images/ghee vaja lengcha.png' },
+    { id:1, name:'Buffalo Ghee 1kg', price:800, weight:'1 kg', category:'ghee', desc:'Pure buffalo ghee with rich aroma', img:'images/buffalo-ghee.png', badge:'Popular' },
+    { id:2, name:'Buffalo Ghee 500g', price:400, weight:'500 g', category:'ghee', desc:'Pure buffalo ghee, half pack', img:'images/buffalo-ghee.png' },
+    { id:3, name:'Buffalo Ghee 250g', price:200, weight:'250 g', category:'ghee', desc:'Pure buffalo ghee, small pack', img:'images/buffalo-ghee.png' },
+    { id:4, name:'Cow Ghee Cream 1kg', price:600, weight:'1 kg', category:'ghee', desc:'Premium cow ghee cream, authentic taste', img:'images/cow-ghee-cream.png', badge:'Best Seller' },
+    { id:5, name:'Cow Ghee Cream 500g', price:300, weight:'500 g', category:'ghee', desc:'Cow ghee cream, half pack', img:'images/cow-ghee-cream.png' },
+    { id:6, name:'Cow Ghee Cream 250g', price:150, weight:'250 g', category:'ghee', desc:'Cow ghee cream, small pack', img:'images/cow-ghee-cream.png' },
+    { id:7, name:'Cow Ghee Malai 1kg', price:1000, weight:'1 kg', category:'ghee', desc:'Premium cow ghee malai, top quality', img:'images/cow-ghee-malai.png', badge:'Premium' },
+    { id:8, name:'Cow Ghee Malai 500g', price:500, weight:'500 g', category:'ghee', desc:'Cow ghee malai, half pack', img:'images/cow-ghee-malai.png' },
+    { id:9, name:'Cow Ghee Malai 250g', price:250, weight:'250 g', category:'ghee', desc:'Cow ghee malai, small pack', img:'images/cow-ghee-malai.png' },
+    { id:10, name:'Puja Ghee', price:250, weight:'', category:'ghee', desc:'Special ghee for puja & rituals', img:'images/puja-ghee.png', badge:'Puja Special' },
+    { id:11, name:'Plain Lassi', price:20, weight:'Glass', category:'lassi', desc:'Traditional refreshing plain lassi', img:'images/plain-lassi.png' },
+    { id:12, name:'Special Lassi', price:40, weight:'Glass', category:'lassi', desc:'Creamy special lassi with dry fruits', img:'images/special-lassi.png', badge:'Popular' },
+    { id:13, name:'Mango Lassi', price:40, weight:'Glass', category:'lassi', desc:'Delicious mango-flavoured lassi', img:'images/mango-lassi.png' },
+    { id:14, name:'Ghee Vaja Lengcha', price:10, weight:'1 pc', category:'sweets', desc:'Traditional ghee-fried lengcha sweet', img:'images/ghee-vaja-lengcha.png' },
     { id:15, name:'Pantua', price:10, weight:'1 pc', category:'sweets', desc:'Soft & juicy Bengali pantua sweet', img:'images/pantua.png' },
-    { id:16, name:'Dahi Bada', price:40, weight:'4 pcs', category:'sweets', desc:'Crispy dahi bada with yogurt topping', img:'images/dahi bada.png', badge:'Must Try' }
+    { id:16, name:'Dahi Bada', price:40, weight:'4 pcs', category:'sweets', desc:'Crispy dahi bada with yogurt topping', img:'images/dahi-bada.png', badge:'Must Try' }
   ];
 
   const PHONE = '918637575281';
