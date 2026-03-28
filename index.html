@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghee Wala — Pure Desi Ghee & Dairy Products in Durgapur</title>
+  <meta name="description" content="Ghee Wala — Durgapur's trusted dairy store for pure desi cow & buffalo ghee, lassi, sweets, paneer, and bulk event orders for weddings, pujas & functions.">
+  <meta name="keywords" content="ghee, desi ghee, cow ghee, buffalo ghee, dairy, Durgapur, paneer, lassi, wedding catering, bulk order, puja ghee, ghee wala">
+  <meta name="author" content="Ghee Wala">
+  <meta name="theme-color" content="#3A2518">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Ghee Wala — Pure Desi Ghee & Dairy Products in Durgapur">
+  <meta property="og:description" content="Fresh cow ghee, buffalo ghee, paneer, lassi, sweets & bulk event orders for weddings and functions in Durgapur.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/ghee wala main logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div class="preloader" id="preloader">
+  <img src="images/ghee wala main logo.png" alt="Ghee Wala" class="preloader-logo" width="80" height="80">
+  <div class="preloader-spinner"></div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <img src="images/ghee wala main logo.png" alt="Ghee Wala Logo" width="48" height="48">
+      <span>Ghee Wala</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#events">Event Orders</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn open-cart" aria-label="Open cart">🛒<span class="cart-count" style="display:none">0</span></button>
+      <a href="https://wa.me/918637575281" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MOBILE NAV ===== -->
+<div class="cart-overlay" id="mobileOverlay" style="display:none"></div>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#events">Event Orders</a>
+  <a href="#about">About</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a href="https://wa.me/918637575281" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🧈 Durgapur's Trusted Dairy Store</div>
+    <h1>Pure Desi <span>Ghee</span> & Dairy Products in Durgapur</h1>
+    <p>Fresh cow ghee, buffalo ghee, paneer, and bulk event orders for weddings, pujas, and functions.</p>
+    <div class="hero-buttons">
+      <a href="#products" class="btn btn-gold">🛒 Shop Products</a>
+      <a href="tel:+918637575281" class="btn btn-outline-white">📞 Call Now</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num" data-count="500">0+</div><div class="hero-stat-label">Happy Customers</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="16">0+</div><div class="hero-stat-label">Products</div></div>
+      <div class="hero-stat"><div class="hero-stat-num" data-count="200">0+</div><div class="hero-stat-label">Events Served</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section id="products">
+  <div class="section-container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">🧈 Our Products</div>
+      <h2>Featured Products</h2>
+      <p>Pure, fresh, and authentic dairy products delivered to your doorstep in Durgapur.(soon)</p>
+    </div>
+    <div class="products-filter animate-on-scroll" id="productsFilter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ghee">Ghee</button>
+      <button class="filter-btn" data-filter="lassi">Lassi</button>
+      <button class="filter-btn" data-filter="sweets">Sweets</button>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVENT ORDERS ===== -->
+<section id="events">
+  <div class="section-container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">🎉 Event Orders</div>
+      <h2>Bulk Orders for Marriage & Functions</h2>
+      <p>We supply fresh dairy products for all your special occasions.</p>
+    </div>
+    <div class="events-content">
+      <div class="events-text animate-on-scroll">
+        <p>We provide fresh bulk ghee, paneer, and dairy supplies for weddings, receptions, pujas, birthdays, and all special events. Trusted by caterers and families across Durgapur.</p>
+        <ul class="events-services">
+          <li>Wedding Catering Supply</li>
+          <li>Puja & Religious Functions</li>
+          <li>Birthday Parties</li>
+          <li>Housewarming Ceremonies</li>
+          <li>Family Events & Community Feasts</li>
+          <li>Restaurant & Caterer Bulk Supply</li>
+        </ul>
+        <div class="events-buttons">
+          <a href="tel:+918637575281" class="btn btn-gold">📞 Book Bulk Order</a>
+          <a href="https://wa.me/918637575281?text=Hi!%20I%20need%20a%20bulk%20order%20quote%20for%20an%20event.%20Please%20share%20details." target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp for Quote</a>
+        </div>
+      </div>
+      <div class="events-img animate-on-scroll">
+        <img src="images/bulk ghee.png" alt="Bulk Ghee for Events" loading="lazy" width="600" height="400">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section id="why">
+  <div class="section-container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">⭐ Why Choose Us</div>
+      <h2>Why Families Trust Ghee Wala</h2>
+      <p>Quality, freshness, and reliability — that's what sets us apart.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card animate-on-scroll"><div class="why-icon">⭐</div><h3>4.7 Star Rated</h3><p>Loved by hundreds of happy customers across Durgapur</p></div>
+      <div class="why-card animate-on-scroll"><div class="why-icon">🌿</div><h3>Fresh Daily Stock</h3><p>Products made and stocked fresh every single day</p></div>
+      <div class="why-card animate-on-scroll"><div class="why-icon">🧴</div><h3>Hygienic Packaging</h3><p>Clean, sealed, and food-safe packaging always</p></div>
+      <div class="why-card animate-on-scroll"><div class="why-icon">💰</div><h3>Affordable Pricing</h3><p>Best quality at the most competitive prices in town</p></div>
+      <div class="why-card animate-on-scroll"><div class="why-icon">🚚</div><h3>Fast Local Delivery</h3><p>Quick doorstep delivery across Durgapur city</p></div>
+      <div class="why-card animate-on-scroll"><div class="why-icon">📦</div><h3>Bulk Order Support</h3><p>Special pricing and support for large event orders</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="section-container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">🏪 About Us</div>
+      <h2>Our Story</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-img animate-on-scroll">
+        <img src="images/ghee wala hero.png" alt="Ghee Wala Store" loading="lazy" width="600" height="400">
+      </div>
+      <div class="about-text animate-on-scroll">
+        <h3>Ghee Wala — Durgapur's Trusted Dairy Store</h3>
+        <p>Ghee Wala is a trusted dairy store in Durgapur known for pure desi ghee and reliable event supplies. We proudly serve families, caterers, and local events with quality products.</p>
+        <p>From pure cow and buffalo ghee to fresh lassi and traditional sweets, we bring the authentic taste of Indian dairy right to your kitchen. Our commitment to hygiene, freshness, and fair pricing has made us a household name in Durgapur.</p>
+        <div class="about-highlights">
+          <div class="about-highlight"><span>🧈</span> Pure Desi Ghee</div>
+          <div class="about-highlight"><span>🥛</span> Fresh Lassi Daily</div>
+          <div class="about-highlight"><span>🍬</span> Traditional Sweets</div>
+          <div class="about-highlight"><span>📦</span> Bulk Event Orders</div>
+        </div>
+        <a href="#contact" class="btn btn-gold">📍 Visit Our Store</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews">
+  <div class="section-container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">💬 Reviews</div>
+      <h2>What Our Customers Say</h2>
+      <p>Real reviews from real customers across Durgapur.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card animate-on-scroll">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Best ghee quality in Durgapur. The cow ghee malai is absolutely divine — pure aroma and authentic taste. Will keep ordering!"</div>
+        <div class="review-author">Priya Sharma</div>
+      </div>
+      <div class="review-card animate-on-scroll">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Ordered in bulk for my daughter's wedding. The service was amazing — on-time delivery, great quality, and very reasonable pricing."</div>
+        <div class="review-author">Rajesh Kumar</div>
+      </div>
+      <div class="review-card animate-on-scroll">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Fresh and authentic taste. We've been buying from Ghee Wala for years. The puja ghee is perfect for all our rituals."</div>
+        <div class="review-author">Sunita Devi</div>
+      </div>
+      <div class="review-card animate-on-scroll">
+        <div class="review-stars">★★★★☆</div>
+        <div class="review-text">"Mango lassi and pantua are our family favourites! The sweets are freshly made and taste just like homemade. Highly recommend."</div>
+        <div class="review-author">Amit Roy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">📍 Contact</div>
+      <h2>Visit Us / Get in Touch</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info animate-on-scroll">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><h4>Address</h4><p>Ispat Pally, B Zone, Durgapur, Near Kalimata Sangh Club, West Bengal, India</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕗</div>
+          <div><h4>Opening Hours</h4><p>8:00 AM — 8:00 PM (Open Daily)</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><h4>Phone</h4><a href="tel:+918637575281">+91 8637575281</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div><h4>WhatsApp</h4><a href="https://wa.me/918637575281" target="_blank" rel="noopener">8637575281</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><h4>Email</h4><a href="mailto:amarpaul1991@gmail.com">amarpaul1991@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📘</div>
+          <div><h4>Facebook</h4><a href="https://www.facebook.com/share/1bC62oh6b8/" target="_blank" rel="noopener">Follow us on Facebook</a></div>
+        </div>
+      </div>
+      <div class="contact-img animate-on-scroll">
+        <img src="images/ghee wala hero.png" alt="Ghee Wala Store" loading="lazy" width="600" height="400">
+      </div>
+    </div>
+    <div class="contact-icons-bar animate-on-scroll">
+      <a href="tel:+918637575281" class="contact-icon-btn" aria-label="Call">📞</a>
+      <a href="https://wa.me/918637575281" target="_blank" rel="noopener" class="contact-icon-btn wa" aria-label="WhatsApp">💬</a>
+      <a href="mailto:amarpaul1991@gmail.com" class="contact-icon-btn" aria-label="Email">✉️</a>
+      <a href="https://www.facebook.com/share/1bC62oh6b8/" target="_blank" rel="noopener" class="contact-icon-btn" aria-label="Facebook">📘</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>© 2025 <strong>Ghee Wala</strong> — Pure Desi Ghee & Dairy Products, Durgapur. Made with ❤️ | <a href="tel:+918637575281">📞 +91 8637575281</a></p>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="floating-btns">
+  <a href="https://wa.me/918637575281" target="_blank" rel="noopener" class="float-btn wa-float" aria-label="WhatsApp">💬</a>
+  <button class="float-btn cart-float open-cart" aria-label="Cart">🛒<span class="float-count" style="display:none">0</span></button>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<!-- ===== CART SIDEBAR ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <button class="btn btn-wa" id="orderWhatsApp" style="width:100%;justify-content:center;padding:14px;font-size:1rem;">💬 Order via WhatsApp</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
