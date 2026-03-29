@@ -20,7 +20,9 @@
     { id:13, name:'Mango Lassi', price:40, weight:'Glass', category:'lassi', desc:'Delicious mango-flavoured lassi', img:IMG_BASE+'mango-lassi.png' },
     { id:14, name:'Ghee Vaja Lengcha', price:10, weight:'1 pc', category:'sweets', desc:'Traditional ghee-fried lengcha sweet', img:IMG_BASE+'ghee-vaja-lengcha.png' },
     { id:15, name:'Pantua', price:10, weight:'1 pc', category:'sweets', desc:'Soft & juicy Bengali pantua sweet', img:IMG_BASE+'pantua.png' },
-    { id:16, name:'Dahi Bada', price:40, weight:'4 pcs', category:'sweets', desc:'Crispy dahi bada with yogurt topping', img:IMG_BASE+'dahi-bada.png', badge:'Must Try' }
+    { id:16, name:'Dahi Bada', price:40, weight:'4 pcs', category:'sweets', desc:'Crispy dahi bada with yogurt topping', img:IMG_BASE+'dahi-bada.png', badge:'Must Try' },
+    { id:17, name:'Paneer 1kg', price:280, weight:'1 kg', category:'ghee', desc:'Fresh and soft pure paneer', img:IMG_BASE+'paneer.png', badge:'New' },
+    { id:18, name:'Mawa 1kg', price:400, weight:'1 kg', category:'sweets', desc:'Authentic fresh mawa (khoya) for sweets', img:IMG_BASE+'mawa.png', badge:'New' }
   ];
 
   const PHONE = '918637575281';
@@ -44,6 +46,32 @@
     createHeroParticles();
     animateHeroStats();
     setupOrderForm();
+    setupThemeToggle();
+  }
+
+  // ===== THEME TOGGLE =====
+  function setupThemeToggle() {
+    const toggleBtn = document.getElementById('themeToggle');
+    if (!toggleBtn) return;
+
+    const currentTheme = localStorage.getItem('gheeWalaTheme');
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+
+    toggleBtn.addEventListener('click', function() {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('gheeWalaTheme', 'light');
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('gheeWalaTheme', 'dark');
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      }
+    });
   }
 
   // ===== PRELOADER =====
