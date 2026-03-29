@@ -258,18 +258,24 @@
 
         var name = document.getElementById('orderName').value.trim();
         var phone = document.getElementById('orderPhone').value.trim();
-        var address = document.getElementById('orderAddress').value.trim();
+        var street = document.getElementById('orderAddress').value.trim();
+        var city = document.getElementById('orderCity').value.trim();
+        var state = document.getElementById('orderState').value.trim();
+        var pincode = document.getElementById('orderPincode').value.trim();
+        var country = document.getElementById('orderCountry').value.trim();
         var payment = form.querySelector('input[name="payment"]:checked').value;
 
-        if (!name || !phone || !address) {
-          showToast('Please fill all fields!');
+        if (!name || !phone || !street || !city || !state || !pincode || !country) {
+          showToast('Please fill all address fields!');
           return;
         }
+
+        var fullAddress = street + '\n' + city + ', ' + state + ' ' + pincode + '\n' + country;
 
         var msg = 'Hello Ghee Wala, I want to place an order:\n\n' +
           '👤 *Name:* ' + name + '\n' +
           '📞 *Phone:* ' + phone + '\n' +
-          '📍 *Address:* ' + address + '\n\n' +
+          '📍 *Address:*\n' + fullAddress + '\n\n' +
           '🛒 *Order Details:*\n\n';
 
         pendingOrder.items.forEach(function(item, i) {

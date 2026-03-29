@@ -88,7 +88,7 @@
     <div class="section-header animate-on-scroll">
       <div class="section-badge"><i class="fa-solid fa-wheat-awn"></i> Our Products</div>
       <h2>Featured Products</h2>
-      <p>Pure, fresh, and authentic dairy products delivered to your doorstep in Durgapur.(soon)</p>
+      <p>Pure, fresh, and authentic dairy products delivered to your doorstep in Durgapur (coming soon).<br>Currently available for store pickup only.</p>
     </div>
     <div class="products-filter animate-on-scroll" id="productsFilter">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -306,9 +306,15 @@
         <label for="orderPhone"><i class="fa-solid fa-phone"></i> Phone Number</label>
         <input type="tel" id="orderPhone" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9]{10}" maxlength="10">
       </div>
-      <div class="form-group">
+      <div class="form-group address-group">
         <label for="orderAddress"><i class="fa-solid fa-location-dot"></i> Delivery Address</label>
-        <textarea id="orderAddress" name="address" placeholder="Enter your full delivery address" required rows="2" autocomplete="street-address"></textarea>
+        <textarea id="orderAddress" name="address" placeholder="Street Address, House/Flat No., Area" required rows="2" autocomplete="address-line1"></textarea>
+        <div class="input-grid">
+          <input type="text" id="orderCity" name="city" placeholder="City" required autocomplete="address-level2">
+          <input type="text" id="orderState" name="state" placeholder="State/Province" required autocomplete="address-level1">
+          <input type="text" id="orderPincode" name="pincode" placeholder="PIN/ZIP Code" required autocomplete="postal-code">
+          <input type="text" id="orderCountry" name="country" placeholder="Country" value="India" required autocomplete="country-name">
+        </div>
       </div>
       <div class="form-group">
         <label><i class="fa-solid fa-credit-card"></i> Payment Method</label>
