@@ -286,6 +286,47 @@
     <button class="btn btn-wa" id="orderWhatsApp" style="width:100%;justify-content:center;padding:14px;font-size:1rem;"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</button>
   </div>
 </div>
+<!-- ===== ORDER FORM MODAL ===== -->
+<div class="order-overlay" id="orderOverlay"></div>
+<div class="order-modal" id="orderModal">
+  <div class="order-modal-header">
+    <h3><i class="fa-solid fa-clipboard-list"></i> Complete Your Order</h3>
+    <button class="order-modal-close" id="orderModalClose" aria-label="Close">✕</button>
+  </div>
+  <div class="order-modal-body">
+    <div class="order-summary" id="orderSummary">
+      <!-- Filled by JS -->
+    </div>
+    <form id="orderForm" autocomplete="on">
+      <div class="form-group">
+        <label for="orderName"><i class="fa-solid fa-user"></i> Your Name</label>
+        <input type="text" id="orderName" name="name" placeholder="Enter your full name" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label for="orderPhone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+        <input type="tel" id="orderPhone" name="phone" placeholder="Enter your phone number" required autocomplete="tel" pattern="[0-9]{10}" maxlength="10">
+      </div>
+      <div class="form-group">
+        <label for="orderAddress"><i class="fa-solid fa-location-dot"></i> Delivery Address</label>
+        <textarea id="orderAddress" name="address" placeholder="Enter your full delivery address" required rows="2" autocomplete="street-address"></textarea>
+      </div>
+      <div class="form-group">
+        <label><i class="fa-solid fa-credit-card"></i> Payment Method</label>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="Cash on Delivery" checked>
+            <span class="payment-label"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="UPI">
+            <span class="payment-label"><i class="fa-solid fa-mobile-screen-button"></i> UPI</span>
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-wa order-submit-btn"><i class="fa-brands fa-whatsapp"></i> Send Order via WhatsApp</button>
+    </form>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

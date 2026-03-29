@@ -43,6 +43,7 @@
     setupBackToTop();
     createHeroParticles();
     animateHeroStats();
+    setupOrderForm();
   }
 
   // ===== PRELOADER =====
@@ -209,26 +210,97 @@
     if (totalEl) totalEl.textContent = '₹' + getCartTotal();
   }
 
+  // ===== ORDER FORM MODAL =====
+  var pendingOrder = null; // { items: [{name, price, qty, weight}], total: number }
+
+  function openOrderModal(items, total) {
+    pendingOrder = { items: items, total: total };
+    var summaryEl = document.getElementById('orderSummary');
+    if (summaryEl) {
+      var html = '<h4><i class="fa-solid fa-cart-shopping"></i> Order Summary</h4>';
+      items.forEach(function(item, i) {
+        html += '<div class="order-summary-item">' +
+          '<span>' + (i + 1) + '. ' + item.name + (item.qty > 1 ? ' x' + item.qty : '') + '</span>' +
+          '<span>₹' + (item.price * item.qty) + '</span>' +
+          '</div>';
+      });
+      html += '<div class="order-summary-total"><span>Total</span><span>₹' + total + '</span></div>';
+      summaryEl.innerHTML = html;
+    }
+    var modal = document.getElementById('orderModal');
+    var overlay = document.getElementById('orderOverlay');
+    if (modal) modal.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeOrderModal() {
+    var modal = document.getElementById('orderModal');
+    var overlay = document.getElementById('orderOverlay');
+    if (modal) modal.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    pendingOrder = null;
+  }
+
+  function setupOrderForm() {
+    var closeBtn = document.getElementById('orderModalClose');
+    var overlay = document.getElementById('orderOverlay');
+    var form = document.getElementById('orderForm');
+
+    if (closeBtn) closeBtn.addEventListener('click', closeOrderModal);
+    if (overlay) overlay.addEventListener('click', closeOrderModal);
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!pendingOrder) return;
+
+        var name = document.getElementById('orderName').value.trim();
+        var phone = document.getElementById('orderPhone').value.trim();
+        var address = document.getElementById('orderAddress').value.trim();
+        var payment = form.querySelector('input[name="payment"]:checked').value;
+
+        if (!name || !phone || !address) {
+          showToast('Please fill all fields!');
+          return;
+        }
+
+        var msg = 'Hello Ghee Wala, I want to place an order:\n\n' +
+          '👤 *Name:* ' + name + '\n' +
+          '📞 *Phone:* ' + phone + '\n' +
+          '📍 *Address:* ' + address + '\n\n' +
+          '🛒 *Order Details:*\n\n';
+
+        pendingOrder.items.forEach(function(item, i) {
+          msg += (i + 1) + '. ' + item.name + (item.qty > 1 ? ' x' + item.qty : '') + ' — ₹' + (item.price * item.qty) + '\n';
+        });
+
+        msg += '\n💰 *Total: ₹' + pendingOrder.total + '*\n' +
+          '💳 *Payment: ' + payment + '*\n\n' +
+          'Please confirm my order. Thank you!';
+
+        window.open('https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg), '_blank');
+        closeOrderModal();
+        form.reset();
+        showToast('Order sent to WhatsApp!');
+      });
+    }
+  }
+
   // ===== WHATSAPP ORDER =====
   function buyNow(id) {
     var p = products.find(function(pr) { return pr.id === id; });
     if (!p) return;
-    var msg = 'Hi! I\'d like to order:\n\n' +
-      '🛒 *' + p.name + '*\n' +
-      '💰 Price: ₹' + p.price + '\n' +
-      '📦 Weight: ' + p.weight + '\n\n' +
-      'Please confirm availability and delivery. Thank you!';
-    window.open('https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg), '_blank');
+    openOrderModal([{ name: p.name, price: p.price, qty: 1, weight: p.weight }], p.price);
   }
 
   function orderViaWhatsApp() {
     if (cart.length === 0) { showToast('Your cart is empty!'); return; }
-    var msg = 'Hi! I\'d like to order:\n\n';
-    cart.forEach(function(c) {
-      msg += '🛒 *' + c.name + '* x' + c.qty + ' — ₹' + (c.price * c.qty) + '\n';
+    var items = cart.map(function(c) {
+      return { name: c.name, price: c.price, qty: c.qty, weight: c.weight };
     });
-    msg += '\n💰 *Total: ₹' + getCartTotal() + '*\n\nPlease confirm my order and share delivery details. Thank you!';
-    window.open('https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg), '_blank');
+    openOrderModal(items, getCartTotal());
   }
 
   // ===== TOAST =====
